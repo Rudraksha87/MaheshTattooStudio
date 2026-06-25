@@ -1,0 +1,9 @@
+{
+  "name": "Mahesh Tattoo Studio",
+  "short_name": "Mahesh Tattoo",
+  "theme_color": "#c1121f",
+  "background_color": "#fdf5ed",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}

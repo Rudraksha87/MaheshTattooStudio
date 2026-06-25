@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://base44.com/logo_v2.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>Mahesh Tattoo Studio — Award-Winning Tattoo Artists in Secunderabad</title>
+    <meta name="description" content="Mahesh Tattoo Studio — Your Story. Your Ink. Premium tattoo studio in Secunderabad with 40 years of artistic experience. Realism, Blackwork, Traditional, Japanese & more." />
+    <meta name="keywords" content="tattoo studio, Secunderabad, tattoo artists, realistic tattoo, Mahesh Tattoo Studio, Neredmet, Telangana" />
+    <meta property="og:title" content="Mahesh Tattoo Studio — Award-Winning Tattoo Artists in Secunderabad" />
+    <meta property="og:description" content="Your Story. Your Ink. Premium tattoo studio with 40 years of artistic mastery. Visit us in Neredmet, Secunderabad." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mahesh Tattoo Studio" />
+    <meta name="twitter:description" content="Your Story. Your Ink. Premium tattoo studio in Secunderabad." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
