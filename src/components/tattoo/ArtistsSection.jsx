@@ -11,7 +11,7 @@ export default function ArtistsSection() {
   return (
     <section id="artists" className="relative bg-background">
       {/* Header */}
-      <div className="text-center pt-24 pb-16 px-6">
+      <div className="text-center pt-0 pb-16 px-6">
         <motion.span
           className="text-xs tracking-[0.3em] uppercase text-primary/70 font-body font-medium"
           initial={{ opacity: 0, y: 20 }}
@@ -21,7 +21,7 @@ export default function ArtistsSection() {
           The Craftsmen
         </motion.span>
         <motion.h2
-          className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-foreground"
+          className="mt-1 font-display text-4xl sm:text-5xl lg:text-6xl text-foreground"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -78,10 +78,25 @@ export default function PencilArtsAboutSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
               >
-                <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-primary mb-2">
-                  {inView ? <CountUp end={stat.value} decimals={0} /> : '0'}
-                  {stat.suffix}
-                </div>
+                <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-primary mb-2 flex items-center justify-center">
+  {inView ? <CountUp end={stat.value} decimals={0} /> : '0'}
+
+  {stat.suffix === '★' ? (
+    <span
+      style={{
+        color: '#FFD700',
+        marginLeft: '4px',
+        textShadow:
+          '0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 35px #FFD700',
+        animation: 'starGlow 1.8s ease-in-out infinite alternate',
+      }}
+    >
+      ★
+    </span>
+  ) : (
+    stat.suffix
+  )}
+</div>
                 <p className="text-xs sm:text-sm text-muted-foreground tracking-wide font-body">{stat.label}</p>
               </motion.div>
             ))}

@@ -93,7 +93,11 @@ export default function TestimonialsSection() {
         >
           <div className="flex gap-0.5">
             {[1, 2, 3, 4, 5].map((s) => (
-              <Star key={s} size={16} className="fill-primary text-primary" />
+              <Star
+  key={s}
+  size={16}
+  className="fill-[#FFD700] text-[#FFD700] drop-shadow-[0_0_6px_#FFD700] transition-all duration-300"
+/>
             ))}
           </div>
           <span className="text-sm text-foreground font-body">5.0 Rating · 4,000+ Happy Clients</span>
@@ -115,7 +119,11 @@ export default function TestimonialsSection() {
               {/* Stars */}
               <div className="flex gap-1 mb-6">
                 {[...Array(testimonials[current].rating)].map((_, i) => (
-                  <Star key={i} size={18} className="fill-primary text-primary" />
+                  <Star
+  key={i}
+  size={16}
+  className="fill-[#FFD700] text-[#FFD700] drop-shadow-[0_0_6px_#FFD700] transition-all duration-300"
+/>
                 ))}
               </div>
 

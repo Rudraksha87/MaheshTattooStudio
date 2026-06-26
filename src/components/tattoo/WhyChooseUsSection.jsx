@@ -66,7 +66,19 @@ export default function WhyChooseUsSection() {
           {features.map((feature, i) => (
             <motion.div
               key={feature.title}
-              className="group glass-panel p-8 rounded-2xl hover:border-primary/20 transition-all duration-500"
+              className="
+group
+glass-panel
+p-8
+rounded-2xl
+border
+border-zinc-700
+transition-all
+duration-500
+hover:-translate-y-2
+hover:border-red-500
+
+"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -74,7 +86,10 @@ export default function WhyChooseUsSection() {
               whileHover={{ y: -4 }}
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] transition-all duration-300">
-                <feature.icon size={22} className="text-primary" />
+               <feature.icon
+  size={22}
+  className="text-primary transition-all duration-300 group-hover:scale-110 group-hover:[filter:drop-shadow(0_0_8px_#ef4444)_drop-shadow(0_0_16px_#ef4444)]"
+/>
               </div>
               <h3 className="font-display text-lg text-foreground mb-3">{feature.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed font-body">{feature.description}</p>

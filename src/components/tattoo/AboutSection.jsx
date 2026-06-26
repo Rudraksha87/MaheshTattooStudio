@@ -18,27 +18,27 @@ export default function AboutSection() {
   const stats = [
     { value: 2000, suffix: '+', label: 'Tattoos Done' },
     { value: 8, suffix: '+', label: 'Years Experience' },
-    { value: 5, suffix: '★', label: 'Star Rating' },
+    { value: 5, suffix: '★ ', label: 'Star Rating' },
     { value: 4000, suffix: '+', label: 'Happy Clients' },
   ];
 
   return (
-    <section id="about" className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="about" className="relative py-12 lg:py-32 overflow-hidden">
       {/* Background texture */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_30%_50%,#D4AF37_1px,transparent_1px)] bg-[length:40px_40px]" />
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <div className="max-w-7xl mx-auto px-3 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center" ref={ref}>
           {/* Left - Text */}
           <div>
             <motion.span
-              className="text-xs tracking-[0.3em] uppercase text-primary/70 font-body font-medium"
+              className="mt-4 text-xs tracking-[0.3em] uppercase text-primary/70 font-body font-medium"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              The Legacy
+              The Legacy 
             </motion.span>
 
             <motion.h2
@@ -78,21 +78,40 @@ export default function AboutSection() {
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
-                className="glass-panel p-6 sm:p-8 rounded-2xl text-center group hover:border-primary/30 transition-all duration-500"
+               className="
+glass-panel
+p-6 sm:p-8
+rounded-2xl
+text-center
+group
+border
+border-zinc-700
+transition-all
+duration-500
+hover:border-red-500
+hover:shadow-[0_0_10px_#ef4444,0_0_25px_#ef4444,0_0_50px_rgba(239,68,68,0.6)]
+"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
               >
-                <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-primary mb-2">
-                  {inView ? (
-                    <CountUp end={stat.value} decimals={0} />
-                  ) : (
-                    '0'
-                  )}
-                  {stat.suffix}
-                </div>
-                <p className="text-xs sm:text-sm text-muted-foreground tracking-wide font-body">{stat.label}</p>
+                <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-black mb-2 flex items-center justify-center">
+  <span className="text-primary">
+    {inView ? <CountUp end={stat.value} decimals={0} /> : "0"}
+  </span>
+
+  {stat.suffix.trim() === "★" ? (
+    <span
+      className="ml-1"
+      style={{ color: "#FFD700" }}
+    >
+      ★
+    </span>
+  ) : (
+    <span className="text-primary">{stat.suffix}</span>
+  )}
+</div>          
               </motion.div>
             ))}
           </div>

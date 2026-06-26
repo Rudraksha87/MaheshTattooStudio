@@ -27,12 +27,6 @@ export default function FloatingButtons() {
         {showBackToTop && (
           <motion.button
             onClick={scrollToTop}
-            className="fixed bottom-6 left-6 z-40 w-12 h-12 rounded-full glass-panel flex items-center justify-center text-foreground/70 hover:text-primary hover:border-primary/50 transition-all duration-300"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.5 }}
-            whileHover={{ y: -3 }}
-            aria-label="Back to top"
           >
             <ArrowUp size={18} />
           </motion.button>
@@ -46,7 +40,7 @@ export default function FloatingButtons() {
             href="https://wa.me/919748249133?text=Hi%20Mahesh%20Tattoo%20Studio%2C%20I%27d%20like%20to%20book%20an%20appointment."
             target="_blank"
             rel="noopener noreferrer"
-            className="fixed bottom-24 left-6 z-40 w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-xl shadow-[#25D366]/40 hover:shadow-[#25D366]/60 transition-all duration-300"
+            className="fixed bottom-20 left-6 z-40 w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-xl shadow-[#25D366]/40 hover:shadow-[#25D366]/60 transition-all duration-300"
             initial={{ opacity: 0, scale: 0, rotate: -180 }}
             animate={{ 
               opacity: 1, 

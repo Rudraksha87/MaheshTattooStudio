@@ -75,17 +75,40 @@ export default function PiercingAboutSection() {
             {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
-                className="glass-panel p-6 sm:p-8 rounded-2xl text-center group hover:border-primary/30 transition-all duration-500"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
-              >
-                <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-primary mb-2">
-                  {inView ? <CountUp end={stat.value} decimals={0} /> : '0'}
-                  {stat.suffix}
-                </div>
-                <p className="text-xs sm:text-sm text-muted-foreground tracking-wide font-body">{stat.label}</p>
+                              className="
+               glass-panel
+               p-6 sm:p-8
+               rounded-2xl
+               text-center
+               group
+               border
+               border-zinc-500
+               transition-all
+               duration-500
+               hover:border-red-50
+               hover:shadow-[0_0_10px_#ef4444,0_0_25px_#ef4444,0_0_25px_rgba(10,30,30,0.6)]
+               "
+                               initial={{ opacity: 0, y: 30 }}
+                               whileInView={{ opacity: 1, y: 0 }}
+                               viewport={{ once: true }}
+                               transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
+                             >
+                               <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-black mb-2 flex items-center justify-center">
+                 <span className="text-primary">
+                   {inView ? <CountUp end={stat.value} decimals={0} /> : "0"}
+                 </span>
+               
+                 {stat.suffix.trim() === "★" ? (
+                   <span
+                     className="ml-1"
+                     style={{ color: "#FFD700" }}
+                   >
+                     ★
+                   </span>
+                 ) : (
+                   <span className="text-primary">{stat.suffix}</span>
+                 )}
+               </div>          
               </motion.div>
             ))}
           </div>
