@@ -8,7 +8,7 @@ export const base44 = createClient({
   appId,
   token,
   functionsVersion,
-  serverUrl: import.meta.env.VITE_BASE44_SERVER_URL || 'maheshtattoostudio-emailuser.up.railway.app/api/book',
+  serverUrl: import.meta.env.VITE_BASE44_SERVER_URL || 'https://maheshtattoostudio-emailuser.up.railway.app',
   requiresAuth: false,
   appBaseUrl
 });

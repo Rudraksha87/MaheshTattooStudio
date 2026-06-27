@@ -65,7 +65,7 @@ const [files, setFiles] = useState([]);
     });
 
     await axios.post(
-      "maheshtattoostudio-emailuser.up.railway.app/api/book",
+      "https://maheshtattoostudio-emailuser.up.railway.app/api/book",
       formData,
       {
         headers: {
