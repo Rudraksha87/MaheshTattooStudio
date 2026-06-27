@@ -65,14 +65,14 @@ const [files, setFiles] = useState([]);
     });
 
     await axios.post(
-      "https://maheshtattoostudio-emailuser.up.railway.app/api/book",
-      formData,
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      }
-    );
+  "https://maheshtattoostudio-emailuser.up.railway.app/api/book",
+  formData,
+  {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  }
+);
 
     setSubmitted(true);
 
