@@ -122,6 +122,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#booking"
+                onClick={(e) => handleNavClick(e, "#booking")}
                 className="ml-2 flex flex-row justify-center items-center gap-2 px-10 py-2 rounded-full border border-primary/30 text-primary text-xs tracking-[0.15em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-body select-none"
               >
                 <Phone size={14} />
