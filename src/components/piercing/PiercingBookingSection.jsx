@@ -19,6 +19,7 @@ export default function PiercingBookingSection() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', date: '', message: '' });
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', 'start start'] });
   const x = useTransform(scrollYProgress, [0, 0.5], [120, 0]);
@@ -40,6 +41,13 @@ export default function PiercingBookingSection() {
   if (!validate()) return;
 
   try {
+    setLoading(true);
+
+    try {
+      // axios request
+    } finally {
+      setLoading(false);
+  }
 
     const formData = new FormData();
 
