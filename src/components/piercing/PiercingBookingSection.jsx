@@ -191,8 +191,9 @@ export default function PiercingBookingSection() {
                 <button
                   type="submit"
                   disabled={loading}
+                  className="w-full py-4 rounded-full bg-primary text-primary-foreground text-sm tracking-[0.15em] uppercase font-body font-semibold hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading ? "Sending..." : "Submit Booking Request"}
+                  {loading ? "Submitting..." : "Submit Booking Request"}
                 </button>
               </motion.form>
             )}
