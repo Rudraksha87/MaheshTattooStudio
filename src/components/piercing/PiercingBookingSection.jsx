@@ -57,17 +57,23 @@ export default function PiercingBookingSection() {
       formData.append("images", file);
     });
 
-    await axios.post(
-      "https://maheshtattoostudio-emailuser.up.railway.app/api/book",
-      formData,
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      }
-    );
+  const response = await axios.post(
+    "https://maheshtattoostudio-emailuser.up.railway.app/api/book",
+    formData,
+    {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    }
+  );
 
+  console.log(response.data);
+
+  if (response.data.success) {
     setSubmitted(true);
+  } else {
+    alert("Booking failed.");
+  }
 
     setTimeout(() => {
       setSubmitted(false);

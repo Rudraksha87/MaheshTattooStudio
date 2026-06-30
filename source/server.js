@@ -87,6 +87,14 @@ app.post("/api/book", upload.array("images"), async (req, res) => {
   } catch (err) {
     console.error("Resend Error:", err);
 
+    if (err.response) {
+    console.log(err.response);
+    }
+
+    if (err.message) {
+    console.log(err.message);
+    }
+
     res.status(500).json({
       success: false,
       message: err.message,
