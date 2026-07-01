@@ -93,22 +93,27 @@ export default function PiercingAboutSection() {
                                viewport={{ once: true }}
                                transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
                              >
-                               <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-black mb-2 flex items-center justify-center">
-                 <span className="text-primary">
-                   {inView ? <CountUp end={stat.value} decimals={0} /> : "0"}
-                 </span>
-               
-                 {stat.suffix.trim() === "★" ? (
-                   <span
-                     className="ml-1"
-                     style={{ color: "#FFD700" }}
-                   >
-                     ★
-                   </span>
-                 ) : (
-                   <span className="text-primary">{stat.suffix}</span>
-                 )}
-               </div>          
+                               <>
+  <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-black flex items-center justify-center">
+    <span className="text-primary">
+      {inView ? <CountUp end={stat.value} decimals={0} /> : "0"}
+    </span>
+
+    {stat.suffix.trim() === "★" ? (
+      <span className="ml-1 text-yellow-400">
+        ★
+      </span>
+    ) : (
+      <span className="text-primary">
+        {stat.suffix}
+      </span>
+    )}
+  </div>
+
+  <p className="mt-4 text-sm sm:text-base tracking-[0.18em] text-zinc-300">
+    {stat.label}
+  </p>
+</>
               </motion.div>
             ))}
           </div>
