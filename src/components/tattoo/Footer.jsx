@@ -67,7 +67,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed font-body">
-              Where military precision meets artistic passion. Award-winning tattoo artists creating unforgettable body art since 2018. Mahesh Tattoos & Arts — your skin, our canvas.
+              Where military precision meets artistic passion. Award-winning tattoo artists creating unforgettable body art since 2007. Mahesh Tattoos & Arts — your skin, our canvas.
             </p>
           </div>
 
